@@ -88,3 +88,34 @@ textarea.materialize-textarea {
     margin-top: 2px;
     padding-top: 5px;
 }
+
+
+.insta-likes {
+    margin-top: 50px;
+}
+
+.insta-img-wrapper{
+    border-radius: 5px;
+    max-width: 100px;
+    padding: 2px;
+}
+
+
+.insta-img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.insta-img-wrapper input {
+    display: block;
+    text-align: center;
+    max-width: inherit;
+}
+
+.cart-button {
+    margin-top: 10px;
+}
+
+.highlight{
+    border: solid #42a5f5;
+}

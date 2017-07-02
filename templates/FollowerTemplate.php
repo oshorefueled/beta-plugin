@@ -23,9 +23,8 @@
             </div>
             <div class="col s12 m5 l5">
                 <form>
-                    <input type="hidden" id="f_count" value="<?php echo $follower_quantity ?>">
+                    <input type="hidden" id="f_count" value="<?php echo $quantity ?>">
                     <input type="hidden" id="order_type" value="<?php echo $order_type ?>">
-                    <input placeholder="enter number of followers" class="browser-default" type="number" name="_follower_count">
                 </form>
             </div>
         </div>
@@ -37,12 +36,12 @@
 
                 <tbody>
                 <tr>
-                    <td>1000 followers</td>
-                    <td>$0.87</td>
+                    <td><?php echo $quantity?> followers</td>
+                    <td>$<?php echo $_product_price ?></td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>$3.76</td>
+                    <td>$<?php echo $_product_price ?></td>
                 </tr>
                 </tbody>
             </table>

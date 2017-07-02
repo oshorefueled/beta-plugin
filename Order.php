@@ -12,7 +12,8 @@ class Order
     {
 
         add_action( 'wp_enqueue_scripts', array($this, 'insta_promo_wp_enqueue_styles'));
-        add_shortcode("insta_followers", array($this, "orderDetail"));
+        add_shortcode("insta_followers", array($this, "orderFollowers"));
+        add_shortcode("insta_likes", array($this, "orderLikes"));
         add_action('wp_ajax_nopriv_addFollowerOrderToCart', array($this, 'addFollowerOrderToCart'));
         add_action( 'wp_ajax_addFollowerOrderToCart', array($this, 'addFollowerOrderToCart'));
         add_action('wp_ajax_nopriv_placeOrder', array($this, 'placeOrder'));
@@ -26,11 +27,26 @@ class Order
      * @param null $content || content from shortcode
      * @return html code
      */
-    function orderDetail($attr, $content=null)
+    function orderFollowers($attr, $content=null)
     {
         ob_start();
         extract($attr);
+        $_product = wc_get_product( $attr['product_id'] );
+        $_product_price = $_product->get_price();
         include plugin_dir_path(__FILE__).'templates/FollowerTemplate.php';
+        return ob_get_clean();
+    } 
+    
+    /**
+     * @param $attr || attributes from shortcode
+     * @param null $content || content from shortcode
+     * @return html code
+     */
+    function orderLikes($attr, $content=null)
+    {
+        ob_start();
+        extract($attr);
+        include plugin_dir_path(__FILE__).'templates/LikesTemplate.php';
         return ob_get_clean();
     }
 
@@ -97,7 +113,7 @@ class Order
 
         $order->calculate_totals();
         $order->update_status( 'processing' );
-        do_action('woocommerce_add_order_item_meta', 15, $items, 2, true);
+        do_action('woocommerce_new_order_item', 4, $items, 2, true);
         WC()->cart->empty_cart();
     }
 
