@@ -21,9 +21,17 @@ class WCIntegration{
         add_action( 'wp_ajax_nopriv_getFromSession', array( $this, 'getFromSession') );
         add_action( 'wp_ajax_getFromSession', array( $this, 'getFromSession') );
         add_action( 'wp_ajax_getOrderData', array( $this, 'getOrderData') );
-        add_action( 'wp_ajax_getOrderData', array( $this, 'getOrderData') );
+        add_action( 'wp_ajax_nopriv_getOrderData', array( $this, 'getOrderData') );
+        add_action( 'wp_ajax_nopriv_getUserInstagramData', array( $this, 'getUserInstagramData') );
+        add_action( 'wp_ajax_getUserInstagramData', array( $this, 'getUserInstagramData') );
         add_action('woocommerce_new_order_item', array($this, 'add_custom_data_order_item'));
+        add_filter( 'woocommerce_add_to_cart_redirect', array($this,'custom_add_to_cart_redirect' ));
 
+    }
+
+    function redirect($url, $statusCode = 303)
+    {
+        header('Location: ' . $url, true, $statusCode);
     }
 
     /**
@@ -80,8 +88,11 @@ class WCIntegration{
                     'order_type' => $order_type,
                     'follower_quantity' => $follower_quantity
                 ));
+            ;
         }
-        echo  json_encode($cart_item_data);
+
+        $url = WC()->cart->get_checkout_url();
+        echo  json_encode(["checkout_url"=> $url]);
         die();
     }
 
@@ -137,8 +148,10 @@ class WCIntegration{
         die();
     }
 
-    function getProductPrice(){
-        
+    function getUserInstagramData(){
+        $_response = wp_remote_get("https://www.instagram.com/".$_POST['username']."?__a=1");
+        print_r($_response["body"]);
+        die();
     }
     
     function add_custom_data_order_item($item_id, $values, $cart_item_key) {
@@ -149,6 +162,11 @@ class WCIntegration{
             wc_add_order_item_meta($item_id, $session_var, $session_data);
         else
             error_log("no session data", 0);
+    }
+
+    function my_custom_add_to_cart_redirect( $url ) {
+        $url = WC()->cart->get_checkout_url();
+        return $url;
     }
 
 

@@ -20,6 +20,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     include "Forms.php";
     include "Order.php";
     include "ApiService.php";
+    include "Settings.php";
     $instap_forms = new Forms("/instagram_view.php");
     $insta_followers = new Order();
 
@@ -41,36 +42,20 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
     {
         add_submenu_page(
             'insta_p',
-            'Insta Settings',
-            'Insta Settings',
+            'Instapromo',
+            'general',
             'manage_options',
-            'insta_settings',
+            'insta_p',
             'instapromo_settings_page_html'
         );
+        
     }
     add_action('admin_menu', 'instapromo_settings_page');
 
 
-    function instapromo_settings_page_html(){
-            ?>
-            <div>
-                <?php screen_icon(); ?>
-                <h2>My Plugin Page Title</h2>
-                <form method="post" action="options.php">
-                    <?php settings_fields( 'myplugin_options_group' ); ?>
-                    <table>
-                        <tr valign="top">
-                            <th scope="row"><label for="myplugin_option_name">Instagram Access Key</label></th>
-                            <td><input type="text" id="myplugin_option_name" name="myplugin_option_name" value="<?php echo get_option('myplugin_option_name'); ?>" /></td>
-                        </tr>
-                    </table>
-                    <?php  submit_button(); ?>
-                </form>
-            </div>
-            <?php
-    }
 
-    function instapromo_page_html(){
+    function instapromo_page_html()
+    {
         if (!current_user_can('manage_options')) {
             return;
         }
@@ -80,6 +65,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
         </div>
         <?php
     }
+
 
 }
 

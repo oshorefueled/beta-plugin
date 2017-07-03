@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bb5dc98-56c9-42ea-b057-d0071bd24d47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/LikesTemplate.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/js/insta_order.js" afterPath="$PROJECT_DIR$/js/insta_likes.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/templates/SettingsTemplate.php" afterPath="$PROJECT_DIR$/Settings.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Api.php" afterPath="$PROJECT_DIR$/Api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Order.php" afterPath="$PROJECT_DIR$/Order.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WCIntegration.php" afterPath="$PROJECT_DIR$/WCIntegration.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/instapromo-UI.css" afterPath="$PROJECT_DIR$/css/instapromo-UI.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/instapromo.php" afterPath="$PROJECT_DIR$/instapromo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/insta_function.js" afterPath="$PROJECT_DIR$/js/insta_function.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/FollowerTemplate.php" afterPath="$PROJECT_DIR$/templates/FollowerTemplate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/LikesTemplate.php" afterPath="$PROJECT_DIR$/templates/LikesTemplate.php" />
     </list>
     <ignored path="instapromo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,16 +50,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Order.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Order.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ApiService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ApiService.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -73,7 +63,7 @@
       <file leaf-file-name="Api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
+            <state relative-caret-position="2106">
               <caret line="117" column="25" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
               <folding />
             </state>
@@ -83,49 +73,38 @@
       <file leaf-file-name="LikesTemplate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/LikesTemplate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+            <state relative-caret-position="144">
+              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="10" selection-end-column="18" />
               <folding>
-                <marker date="1499021095942" expanded="true" signature="624:670" placeholder="..." />
+                <marker date="1499049894567" expanded="true" signature="775:821" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insta_function.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="instapromo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/instapromo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+              <folding>
+                <element signature="e#6#225#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="insta_function.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/insta_function.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
-              <caret line="258" column="13" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="13" />
+              <caret line="304" column="20" selection-start-line="304" selection-start-column="20" selection-end-line="304" selection-end-column="20" />
               <folding>
-                <element signature="e#0#38#0" expanded="false" />
-                <marker date="1499021334299" expanded="true" signature="849:898" placeholder="..." />
-                <marker date="1499021334299" expanded="true" signature="919:937" placeholder="..." />
-                <marker date="1499021334299" expanded="true" signature="919:964" placeholder="..." />
-                <marker date="1499021334299" expanded="true" signature="973:987" placeholder="..." />
-                <marker date="1499021334299" expanded="true" signature="973:1025" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="instapromo.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/instapromo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FollowerTemplate.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/FollowerTemplate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-              <folding>
-                <marker date="1499022708327" expanded="true" signature="1116:1143" placeholder="..." />
+                <marker date="1499052267236" expanded="true" signature="876:929" placeholder="..." />
+                <marker date="1499052267236" expanded="true" signature="950:968" placeholder="..." />
+                <marker date="1499052267236" expanded="true" signature="950:999" placeholder="..." />
+                <marker date="1499052267236" expanded="true" signature="1008:1022" placeholder="..." />
+                <marker date="1499052267236" expanded="true" signature="1008:1064" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -134,8 +113,8 @@
       <file leaf-file-name="WCIntegration.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WCIntegration.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+            <state relative-caret-position="1692">
+              <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -146,6 +125,28 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FollowerTemplate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/FollowerTemplate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <marker date="1499050613710" expanded="true" signature="1406:1433" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailTemplate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/EmailTemplate.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -185,14 +186,16 @@
         <option value="$PROJECT_DIR$/templates/OrderTemplate.php" />
         <option value="$PROJECT_DIR$/ApiGateway.php" />
         <option value="$PROJECT_DIR$/ApiService.php" />
-        <option value="$PROJECT_DIR$/css/instapromo-UI.css" />
         <option value="$PROJECT_DIR$/Api.php" />
-        <option value="$PROJECT_DIR$/templates/LikesTemplate.php" />
-        <option value="$PROJECT_DIR$/js/insta_function.js" />
+        <option value="$PROJECT_DIR$/Settings.php" />
+        <option value="$PROJECT_DIR$/instapromo.php" />
         <option value="$PROJECT_DIR$/WCIntegration.php" />
         <option value="$PROJECT_DIR$/Order.php" />
+        <option value="$PROJECT_DIR$/templates/LikesTemplate.php" />
+        <option value="$PROJECT_DIR$/css/instapromo-UI.css" />
         <option value="$PROJECT_DIR$/templates/FollowerTemplate.php" />
-        <option value="$PROJECT_DIR$/instapromo.php" />
+        <option value="$PROJECT_DIR$/js/insta_likes.js" />
+        <option value="$PROJECT_DIR$/js/insta_function.js" />
       </list>
     </option>
   </component>
@@ -276,6 +279,48 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instapromo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instapromo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instapromo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instapromo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instapromo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="instapromo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -288,6 +333,9 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/css" />
@@ -359,15 +407,15 @@
       <workItem from="1498767259277" duration="23516000" />
       <workItem from="1498856198169" duration="4404000" />
       <workItem from="1498915120320" duration="1964000" />
-      <workItem from="1499016481358" duration="7168000" />
+      <workItem from="1499016481358" duration="28492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="196799000" />
+    <option name="totallyTimeSpent" value="218123000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="703" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="703" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23863636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -376,7 +424,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13344316" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -408,13 +456,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/instapromo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/fiverr/instaplugin/order.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -589,38 +630,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/EmailTemplate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/materialize.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/phrase.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="76" column="14" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/instapromo-admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/plugin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -659,13 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/insta_order.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/fiverr/instaplugin/functionz.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -695,25 +701,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Forms.php">
+    <entry file="file://$PROJECT_DIR$/Order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="19" />
+        <state relative-caret-position="396">
+          <caret line="49" column="8" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/insta_likes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/plugin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/materialize.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/instapromo-UI.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="112" column="1" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+        <state relative-caret-position="486">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/FormTemplate.php">
+    <entry file="file://$PROJECT_DIR$/css/instapromo-admin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="46" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WCIntegration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1692">
+          <caret line="94" column="36" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/instapromo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding>
+            <element signature="e#6#225#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Forms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -728,68 +793,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
+        <state relative-caret-position="2106">
           <caret line="117" column="25" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WCIntegration.php">
+    <entry file="file://$PROJECT_DIR$/templates/LikesTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="144">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <marker date="1499049894567" expanded="true" signature="775:821" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Order.php">
+    <entry file="file://$PROJECT_DIR$/templates/FormTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/FollowerTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="486">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding>
-            <marker date="1499022708327" expanded="true" signature="1116:1143" placeholder="..." />
+            <marker date="1499050613710" expanded="true" signature="1406:1433" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/LikesTemplate.php">
+    <entry file="file://$PROJECT_DIR$/templates/EmailTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-          <folding>
-            <marker date="1499021095942" expanded="true" signature="624:670" placeholder="..." />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/insta_function.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
-          <caret line="258" column="13" selection-start-line="258" selection-start-column="12" selection-end-line="258" selection-end-column="13" />
+          <caret line="304" column="20" selection-start-line="304" selection-start-column="20" selection-end-line="304" selection-end-column="20" />
           <folding>
-            <element signature="e#0#38#0" expanded="false" />
-            <marker date="1499021334299" expanded="true" signature="849:898" placeholder="..." />
-            <marker date="1499021334299" expanded="true" signature="919:937" placeholder="..." />
-            <marker date="1499021334299" expanded="true" signature="919:964" placeholder="..." />
-            <marker date="1499021334299" expanded="true" signature="973:987" placeholder="..." />
-            <marker date="1499021334299" expanded="true" signature="973:1025" placeholder="..." />
+            <marker date="1499052267236" expanded="true" signature="876:929" placeholder="..." />
+            <marker date="1499052267236" expanded="true" signature="950:968" placeholder="..." />
+            <marker date="1499052267236" expanded="true" signature="950:999" placeholder="..." />
+            <marker date="1499052267236" expanded="true" signature="1008:1022" placeholder="..." />
+            <marker date="1499052267236" expanded="true" signature="1008:1064" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/instapromo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="59" column="73" selection-start-line="59" selection-start-column="73" selection-end-line="59" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>

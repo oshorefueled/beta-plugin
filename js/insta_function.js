@@ -1,8 +1,4 @@
-/**
- * Created by osho on 6/12/17.
- */
 
-const instagram_token =  "3916661047.43265d5.78062df4b2104856bc66b31149c06e50";
 
 function getJsonFromUrl() {
     var query = location.search.substr(1);
@@ -24,20 +20,27 @@ function getBaseUrl() {
 function getUserData($, callback) {
     var params = getJsonFromUrl();
     var username = params._username;
-    $.get( "https://www.instagram.com/"+username+"?__a=1", function( data ) {
-        callback(data)
+
+    $.ajax({
+        url: "https://www.instagram.com/osho_refueled?__a=1",
+        type: "GET",
+        crossDomain: true,
+        success: function(data){
+            console.log("this is the "+data);
+            callback(data);
+        }
     });
 }
 
-function appendDetailData($, counts) {
-    $("#detail-table").append("<tr><td>Followers</td><td>"+counts.followed_by+"</td></tr>"+
-        "<tr><td>Following</td><td>"+counts.follows+"</td></tr><tr><td>Posts</td>" +
-        "<td>"+counts.media+"</td></tr>"
-    )
+function appendDetailData($, data) {
+    $("#detail-table").empty().append("<tr><td>Followers</td><td>"+data.followed_by.count+"</td></tr>"+
+        "<tr><td>Following</td><td>"+data.follows.count+"</td></tr><tr><td>Posts</td>" +
+        "<td>"+data.media.count+"</td></tr>"
+    );
 }
 
 function appendImage($, data) {
-    $(".profile-img").attr("src",data.profile_picture);
+    $(".profile-img").attr("src",data.profile_pic_url);
 }
 
 
@@ -66,7 +69,7 @@ function saveFollowerOrderToCart($) {
     var productId = getProductId($);
     var followerQuantity = getFollowerQuantity($);
     var orderType = getOrderType($);
-    var username = getJsonFromUrl()._username;
+    var username = $("#IG-handle").val();
     var data = {
         action: 'addItemToCart',
         product_id: productId,
@@ -74,7 +77,12 @@ function saveFollowerOrderToCart($) {
         order_type: orderType,
         follower_quantity: followerQuantity
     };
-    sendRequest($, data, 'follower order');
+    $.post(InstaAjax.ajaxurl, data, function(response) {
+        var res = JSON.parse(response);
+        var url = res.checkout_url;
+        console.log(url);
+        $("#to-payment").attr("href", url);
+    });
 }
 
 function getOrderFromCart($) {
@@ -84,6 +92,8 @@ function getOrderFromCart($) {
 
     sendRequest($, data, "order from cart");
 }
+
+
 
 function placeOrder($) {
     var data = {
@@ -114,7 +124,6 @@ function getOrderData($) {
 
     sendRequest($, data, "get order data");
 }
-
 
 function notify($) {
     $('.notify-fixed').fadeIn();
@@ -225,19 +234,60 @@ function saveLikesOrderToCart($) {
     sendRequest($, data, 'likes order');
 }
 
+
+function getUserInstagramData($, callback) {
+    var username = $("#IG-handle").val();
+    var data = {
+        action: 'getUserInstagramData',
+        username:username
+    };
+
+    $.post(InstaAjax.ajaxurl, data, function(response) {
+        var newData = JSON.parse(response);
+        console.log(newData);
+        callback(newData);
+    });
+}
+
+
 (function($) {
     $(document).ready(function() {
+
+        var typingTimer;                //timer identifier
+        var doneTypingInterval = 3000;  //time in ms, 5 second for example
+        var $input = $('#IG-handle');
+
+        //on keyup, start the countdown
+        $input.on('keyup', function () {
+            clearTimeout(typingTimer);
+            $("#image-col").empty();
+            typingTimer = setTimeout(doneTyping, doneTypingInterval);
+        });
+
+        //on keydown, clear the countdown
+        $input.on('keydown', function () {
+            clearTimeout(typingTimer);
+            $("#image-col").empty();
+        });
+
+        //user is "finished typing," do something
+        function doneTyping () {
+            getUserInstagramData($, function (data) {
+                appendDetailData($, data.user);
+                appendImage($, data.user);
+
+                var userData = data.user.media.nodes;
+                for(var i=0; i<userData.length; i++){
+                    appendMedia($, userData[i].thumbnail_src, "https://instagram.com/p/"+userData[i].code);
+                }
+            });
+        }
 
         /**
          * Followers
          */
-        getUserData($, function (data) {
-            console.log(data.data);
-            appendDetailData($, data.data.counts);
-            appendImage($, data.data);
-        });
 
-        $('.btn').on("click", function () {
+        $('.follow-confirm-order ').on("click", function () {
             saveFollowerOrderToCart($);
             notify($);
         });
@@ -250,27 +300,26 @@ function saveLikesOrderToCart($) {
         $("body").on("change paste keyup .likes-forms", function() {
             updateTotalLikes($);
             var remaining = getRemainingLikes($);
-            if( remaining == 0){
-                console.log("not disabled");
-                $(".confirm-button").prop("disabled", false);
+            if( remaining === 0){
+                $(".likes-confirm-button").prop("disabled", false);
             } else {
-                console.log("disabled");
-                $(".confirm-button").prop("disabled", true);
+                $(".likes-confirm-button").prop("disabled", true);
             }
         });
 
-        getUserMedia($, function (data) {
-            console.log(data);
-            var userData = data.data;
-            for(var i=0; i<userData.length; i++){
-                appendMedia($, userData[i].images.thumbnail.url);
-            }
-
-        });
         highlightImage($);
 
         $(".likes-confirm-button").on("click", function () {
             saveLikesOrderToCart($);
+        });
+
+        $(function() {
+            $("#image-col input[type=text]").each(function() {
+                if(!isNaN(this.value)) {
+                    alert(this.value + " is a valid number");
+                }
+            });
+            return false;
         });
 
 

@@ -46,6 +46,8 @@ class Order
     {
         ob_start();
         extract($attr);
+        $_product = wc_get_product( $attr['product_id'] );
+        $_product_price = $_product->get_price();
         include plugin_dir_path(__FILE__).'templates/LikesTemplate.php';
         return ob_get_clean();
     }

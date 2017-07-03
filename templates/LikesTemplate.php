@@ -6,6 +6,9 @@
     </div>
     <div class="container">
         <div class="row">
+            <div class="handle-form">
+                <input id="IG-handle" name="instagram-handle" placeholder="awesome_username">
+            </div>
             <div id="image-col" class="col s7">
                 <!-- images to be appended here -->
             </div>
@@ -25,7 +28,7 @@
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>$3.76</td>
+                        <td>$<?php echo $_product_price ?></td>
                     </tr>
                     </tbody>
                 </table>

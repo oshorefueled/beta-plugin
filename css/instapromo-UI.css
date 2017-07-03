@@ -14,14 +14,22 @@ Rows and columns
     ***********/
 
 .profile-img {
-    max-width: 200px;
-    min-width: 200px;
-    margin: 5px 5px 5px 5px;
-    padding: 2px 2px 2px 2px;
+    max-width: 100%;
+    min-width: inherit;
+    margin: 0px 5px 5px 5px;
+    padding: 0px 2px 2px 2px;
 }
 
 .follower-order table{
     max-width: 60%;
+}
+
+.handle-form {
+    padding: 0px 30px 22px 30px;
+}
+
+#IG-handle {
+    padding: 0px 5px 0px 5px
 }
 
 .follower-order form {
@@ -118,4 +126,20 @@ textarea.materialize-textarea {
 
 .highlight{
     border: solid #42a5f5;
+}
+
+input::-webkit-input-placeholder {
+    color: grey !important;
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+    color: grey !important;
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+    color: grey !important;
+}
+
+input:-ms-input-placeholder {
+    color: grey !important;
 }
