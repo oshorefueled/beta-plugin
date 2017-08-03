@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class ApiService
 {
-    public $api_url = 'https://justanotherpanel.com/api/v2'; // API URL
+    public $api_url = ''; // API URL
 
-    public $api_key = 'ccf7b3bfaed10ffd0f9751ddcde61ac4'; // Your API key
+    public $api_key = ''; // Your API key
 
     public function order($data) { // add order
         $post = array_merge(array('key' => $this->api_key, 'action' => 'add'), $data);
